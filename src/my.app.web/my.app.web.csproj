@@ -1,9 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+    <!-- <ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:80</ContainerBaseImage> -->  <!-- optional to specify base image required -->
+    <!-- <PublishProfile>DefaultContainer</PublishProfile> -->
+    <!-- <ContainerRegistry>hellodocker01.azurecr.io</ContainerRegistry> -->
+    <UserSecretsId>568a2af3-ab2e-4f62-85ff-d855ceb120bb</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
 
 </Project>
